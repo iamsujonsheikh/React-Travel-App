@@ -4,6 +4,9 @@ import Hero from "./Components/Hero";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import Search from "./Components/Search";
+import Selects from "./Components/Selects";
+import Carousel from "./Components/Carousel";
+
 
 function App() {
   return (
@@ -12,7 +15,9 @@ function App() {
       <Hero/>
       <Destination/>
       <Search/>
-      {/* <Footer/> */}
+      <Selects/>
+      <Carousel/>
+      <Footer/>
     </div>
   );
 }

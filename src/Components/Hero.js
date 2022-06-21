@@ -1,10 +1,12 @@
 import React from 'react'
 import beachVideo from '../assets/beachVid.mp4'
 import { FaSearchLocation } from 'react-icons/fa';
+import Typed from 'react-typed';
+
 
 const Hero = () => {
   return (
-    <section>
+    <section name='home' >
         <div className='w-full h-screen relative'>
             <video className='w-full h-screen object-cover' src={beachVideo} autoPlay loop muted />
 
@@ -15,7 +17,14 @@ const Hero = () => {
             <div className='absolute top-0 left-0 w-full h-full flex flex-col  justify-center items-center space-y-2'>
 
                 <h1 className='text-3xl font-semibold text-white'>First Class Travel</h1>
-                <h1 className='text-2xl md:text-3xl font-semibold text-white'>Top 1% Locations Worldwide</h1>
+                <h1 ></h1>
+                <Typed
+                    className='text-2xl font-[cursive] md:text-3xl font-semibold text-slate-300'
+                    strings={['Top 1% Locations Worldwide','Enoy Your Destination']}
+                    typeSpeed={70}
+                    backSpeed={70}
+                    loop 
+                />
                 
             {/* hero bg shadow dark section */}
                 <form className='flex w-80 md:w-96  h-10 border justify-between p-1 rounded bg-gray-200'>

@@ -7,11 +7,11 @@ import picFive from '../assets/maldives2.jpg'
 
 const Destination = () => {
   return (
-    <section className='max-w-[1000px] h-screen px-6 mx-auto'>
+    <section name='destination' className='max-w-[1000px] z-10 h-full px-6 mx-auto py-10'>
 
         {/* Tittle section */}
         <div className='text-center py-6'>
-            <h1 className='text-2xl font-bold'>All-Inclusive Resorts</h1>
+            <h1 className='text-3xl font-bold'>All-Inclusive Resorts</h1>
             <p className='font-medium'>On the Caribbean's Best Beaches</p>
         </div>
 

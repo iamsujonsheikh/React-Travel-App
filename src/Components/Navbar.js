@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { FiMenu } from 'react-icons/fi';
 import { GrClose } from 'react-icons/gr';
 import { BsFillPersonFill,BsSearch,BsFacebook,BsTwitter,BsYoutube,BsPinterest,BsInstagram,BsLinkedin } from 'react-icons/bs';
+import { Link, animateScroll as scroll, } from 'react-scroll'
 
 
 const Navbar = () => {
@@ -22,11 +23,32 @@ const Navbar = () => {
 
         {/* destop li section */}
         <ul className='hidden md:flex space-x-6 font-medium uppercase text-white'>
-            <li className='cursor-pointer'>Home</li>
+
+        <li className='cursor-pointer'>
+        <Link to="home" smooth={true} offset={-50} duration={500}>Home</Link>
+        </li>
+        
+        <li className='cursor-pointer'>
+        <Link to="destination" smooth={true} offset={50} duration={500}>Destination</Link>
+        </li>
+
+        <li className='cursor-pointer'>
+        <Link to="travel" smooth={true} offset={-50} duration={500}>travel</Link>
+        </li>
+
+        <li className='cursor-pointer'>
+        <Link to="view" spy={true} smooth={true} offset={50} duration={500}>view</Link>
+        </li>
+
+        <li className='cursor-pointer'>
+        <Link to="book" smooth={true} offset={-70} duration={500}>book</Link>
+        </li>
+
+            {/* <li className='cursor-pointer'>Home</li>
             <li className='cursor-pointer'>Destination</li>
             <li className='cursor-pointer'>Travel</li>
             <li className='cursor-pointer'>view</li>
-            <li className='cursor-pointer'>Book</li>
+            <li className='cursor-pointer'>Book</li> */}
         </ul>
 
         {/* person and search icon */}
@@ -45,15 +67,25 @@ const Navbar = () => {
 
            <ul className={!open ? 'hidden' : 'absolute top-12 left-0 w-full bg-slate-400 font-medium uppercase px-6'}>
 
-            <li className='cursor-pointer border-b-blue-100 p-2 border-b  hover:bg-slate-500 rounded ease-in-out duration-500 hover:text-white'>Home</li>
+            <li className='cursor-pointer border-b-blue-100 p-2 border-b  hover:bg-slate-500 rounded ease-in-out duration-500 hover:text-white'>
+            <Link to="home" smooth={true} offset={-50} duration={500}>Home</Link>
+            </li>
 
-            <li className='cursor-pointer border-b-blue-100 p-2 border-b hover:bg-slate-500 rounded ease-in-out duration-500 hover:text-white'>Destination</li>
+            <li className='cursor-pointer border-b-blue-100 p-2 border-b hover:bg-slate-500 rounded ease-in-out duration-500 hover:text-white'>
+            <Link to="home" smooth={true} offset={-50} duration={500}>Destination</Link>
+            </li>
 
-            <li className='cursor-pointer border-b-blue-100 p-2 border-b hover:bg-slate-500 rounded ease-in-out duration-500 hover:text-white'>Travel</li>
+            <li className='cursor-pointer border-b-blue-100 p-2 border-b hover:bg-slate-500 rounded ease-in-out duration-500 hover:text-white'>
+            <Link to="home" smooth={true} offset={-50} duration={500}>Travel</Link>
+            </li>
 
-            <li className='cursor-pointer border-b-blue-100 p-2 border-b hover:bg-slate-500 rounded ease-in-out duration-500 hover:text-white'>view</li>
+            <li className='cursor-pointer border-b-blue-100 p-2 border-b hover:bg-slate-500 rounded ease-in-out duration-500 hover:text-white'>
+            <Link to="home" smooth={true} offset={-50} duration={500}>View</Link>
+            </li>
 
-            <li className='cursor-pointer p-2 hover:bg-slate-500 rounded ease-in-out duration-500 hover:text-white border-b border-b-blue-100'>Book</li>
+            <li className='cursor-pointer p-2 hover:bg-slate-500 rounded ease-in-out duration-500 hover:text-white border-b border-b-blue-100'>
+            <Link to="home" smooth={true} offset={-50} duration={500}>Book</Link>
+            </li>
 
             {/*mobile section search and account button  */}
            <div className='flex flex-col my-4 space-y-4'>
